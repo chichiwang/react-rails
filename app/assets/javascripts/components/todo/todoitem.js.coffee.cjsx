@@ -42,6 +42,7 @@
   render: ->
     <div className={ @_itemClassnames() } onMouseEnter={ @_itemEnter } onMouseLeave={ @_itemLeave }>
       <p className="todo-text">TodoItem</p>
+      <input type="text" className="todo-input"></input>
       <div className="todo-buttons">
         <span className={ @_doneClassnames() } onClick={ @_doneClick } onMouseEnter={ @_doneEnter } onMouseLeave={ @_doneLeave }>
           ✓
