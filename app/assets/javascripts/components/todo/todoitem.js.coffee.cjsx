@@ -32,11 +32,15 @@
   _deleteClick: ->
     console.log 'Delete Clicked!'
 
+  _inputChanged: (e)->
+    @setState { inputVal: e.target.value }
+
   getInitialState: ->
     {
       itemActive: false
       doneActive: false
       deleteActive: false
+      inputVal: 'TodoItem'
     }
 
   render: ->
@@ -48,8 +52,8 @@
         </div>
 
         <div className="task">
-          <p className="text">TodoItem</p>
-          <input type="text" className="input"></input>
+          <p className="text">{ @state.inputVal }</p>
+          <textarea className="input" maxLength="90" onChange={ @_inputChanged } value={ @state.inputVal }></textarea>
         </div>
 
         <div className="buttons">

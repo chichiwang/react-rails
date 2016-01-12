@@ -1,6 +1,13 @@
 @import 'nib'
 @import '_globals'
 
+$itemTextFont()
+  color: $defaultColor
+  font-family: 'courier new', 'courier', sans-serif
+  line-height: 30px
+  min-height: 1.35em
+  word-wrap: break-word
+
 .todo-item
   margin-left: 1.5em
   margin-bottom: 0.25em
@@ -41,18 +48,29 @@
     background-color: orange
     
     .text
-      padding: 0 0.5em
       display: block
-      position: absolute
+      padding: 0 0.5em
+      width: 100%
+      $itemTextFont()
+      border: 1px solid transparent
+      pointer-events: none
     
     .input
+      display: block
+      position: absolute
+      top: 0
+      left: 0
       padding: 0 0.5em
       margin: 0
       width: 100%
+      max-width: 100%
       height: 100%
       font-size: 1em
-      border: $defaultColor
+      $itemTextFont()
+      border: 1px solid $defaultColor
+      outline: 0
       background-color: transparent
+      resize: none
   
   /** Buttons
     */
