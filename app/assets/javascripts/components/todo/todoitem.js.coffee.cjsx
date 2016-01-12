@@ -12,7 +12,7 @@
 
   _doneClassnames: ->
     classNames
-      'todo-done': true
+      'done-btn': true
       'active': @state.doneActive
   _doneEnter: ->
     @setState { doneActive: true }
@@ -23,7 +23,7 @@
 
   _deleteClassnames: ->
     classNames
-      'todo-delete': true
+      'delete-btn': true
       'active': @state.deleteActive
   _deleteEnter: ->
     @setState { deleteActive: true }
@@ -41,14 +41,26 @@
 
   render: ->
     <div className={ @_itemClassnames() } onMouseEnter={ @_itemEnter } onMouseLeave={ @_itemLeave }>
-      <p className="todo-text">TodoItem</p>
-      <input type="text" className="todo-input"></input>
-      <div className="todo-buttons">
-        <span className={ @_doneClassnames() } onClick={ @_doneClick } onMouseEnter={ @_doneEnter } onMouseLeave={ @_doneLeave }>
-          ✓
-        </span>
-        <span className={ @_deleteClassnames() } onClick={ @_deleteClick } onMouseEnter={ @_deleteEnter } onMouseLeave={ @_deleteLeave }>
-          X
-        </span>
+      
+      <div className="content">
+
+        <div className="positioning">
+        </div>
+
+        <div className="task">
+          <p className="text">TodoItem</p>
+          <input type="text" className="input"></input>
+        </div>
+
+        <div className="buttons">
+          <span className={ @_doneClassnames() } onClick={ @_doneClick } onMouseEnter={ @_doneEnter } onMouseLeave={ @_doneLeave }>
+            ✓
+          </span>
+          <span className={ @_deleteClassnames() } onClick={ @_deleteClick } onMouseEnter={ @_deleteEnter } onMouseLeave={ @_deleteLeave }>
+            X
+          </span>
+        </div>
+
       </div>
+
     </div>
