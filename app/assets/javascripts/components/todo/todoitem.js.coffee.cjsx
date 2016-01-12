@@ -10,16 +10,16 @@
   _itemLeave: ->
     @setState { itemActive: false }
 
-  _doneClassnames: ->
+  _completedClassnames: ->
     classNames
-      'done-btn': true
+      'completed-btn': true
       'active': @state.doneActive
-  _doneEnter: ->
+  _completedEnter: ->
     @setState { doneActive: true }
-  _doneLeave: ->
+  _completedLeave: ->
     @setState { doneActive: false }
-  _doneClick: ->
-    console.log 'Done Clicked!'
+  _completedClick: ->
+    console.log 'Completed Clicked!'
 
   _deleteClassnames: ->
     classNames
@@ -53,7 +53,7 @@
         </div>
 
         <div className="buttons">
-          <span className={ @_doneClassnames() } onClick={ @_doneClick } onMouseEnter={ @_doneEnter } onMouseLeave={ @_doneLeave }>
+          <span className={ @_completedClassnames() } onClick={ @_completedClick } onMouseEnter={ @_completedEnter } onMouseLeave={ @_completedLeave }>
             ✓
           </span>
           <span className={ @_deleteClassnames() } onClick={ @_deleteClick } onMouseEnter={ @_deleteEnter } onMouseLeave={ @_deleteLeave }>
