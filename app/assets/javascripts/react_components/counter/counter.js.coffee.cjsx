@@ -1,7 +1,8 @@
 @Counter = React.createClass
 
   _counterClick: ->
-    @setState { count: @state.count + 1 }
+    newCount = @math.add @state.count, 1
+    @setState { count: newCount }
   
   getInitialState: ->
     {
@@ -12,3 +13,6 @@
     <div className="counter" onClick={ @_counterClick } >
       { @state.count }
     </div>
+
+  componentDidMount: ->
+    @math = require('util/math')

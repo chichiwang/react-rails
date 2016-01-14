@@ -14,3 +14,4 @@
 //= require react_ujs
 //= require components
 //= require_tree ./react_components
+//= require_tree ./util
