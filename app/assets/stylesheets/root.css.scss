@@ -1,0 +1,21 @@
+@import 'globals';
+
+* {
+  box-sizing: border-box;
+}
+
+#Root {
+  color: $defaultColor;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    padding: 0.25em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 1px solid $defaultColor;
+    text-align: center;
+  }
+
+}

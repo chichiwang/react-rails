@@ -1,0 +1,7 @@
+$defaultColor: #9b5800;
+$bgColor: #fcf3e8;
+
+@mixin opacityWithTransition($o, $time) {
+  opacity: $o;
+  transition: opacity $time ease-in-out;
+}

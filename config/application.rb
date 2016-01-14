@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'stylus'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -25,7 +24,5 @@ module ReactRails
     config.assets.paths << Rails.root.join('node_modules')
     config.active_record.raise_in_transactional_callbacks = true
     config.react.jsx_transformer_class = Sprockets::CoffeeReactScript
-
-    Stylus.use(:nib)
   end
 end
