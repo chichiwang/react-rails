@@ -1,7 +1,7 @@
 @Counter = React.createClass
 
   _counterClick: ->
-    newCount = @math.add @state.count, 1
+    newCount = @_math.add @state.count, 1
     @setState { count: newCount }
   
   getInitialState: ->
@@ -15,4 +15,4 @@
     </div>
 
   componentDidMount: ->
-    @math = require('util/math')
+    @_math = require('util/math')
